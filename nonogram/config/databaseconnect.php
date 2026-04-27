@@ -1,9 +1,9 @@
 <?php
 // Configuration de la connexion à la base de données MySQL
-$host = "mysql-muceniece.alwaysdata.net"; // Hôte de la base de données mysql-pps2025.alwaysdata.net
-$dbname = "muceniece_nonogram"; // Nom de la base de données
-$username = "muceniece"; // Nom d'utilisateur
-$password = "CukurvateZiemassvetkiJaunpils!3145"; // Mot de passe
+$host = "localhost"; // Hôte de la base de données mysql-pps2025.alwaysdata.net
+$dbname = "nonogram"; // Nom de la base de données
+$username = "test"; // Nom d'utilisateur
+$password = "test"; // Mot de passe
 
 try {
     // Création de la connexion PDO pour MariaDB
