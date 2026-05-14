@@ -562,24 +562,33 @@ function startPlay(elt){
         musicControls.classList.remove('d-none')
 }
 
-//  Musique
+// Musique
 let music2 = document.getElementById('music2')
 music2.loop = true
 
 if (!musics || musics.length === 0) {
-    alert("Vous n'avez aucune musique achetée. Le jeu démarre sans musique.")
+
+    // Affichage message discret au lieu du popup
+    let musicMessage = document.getElementById('musicMessage')
+
+    if (musicMessage) {
+        musicMessage.innerHTML = `
+            <div class="alert alert-info mt-2 py-2">
+                Vous n'avez aucune musique achetée. Le jeu démarre sans musique.
+            </div>
+        `
+    }
+
 } else {
+
     let music = musics[Math.floor(Math.random() * musics.length)]
 
     music2.setAttribute('src', '/nonogram/extras/' + music)
     music2.play()
 
-    // Ancien code qui provoquait une erreur :
-    // let musicStart = document.getElementById(music2.getAttribute('src'))
-    // musicStart.setAttribute('selected', 'selected')
-
-    // Nouveau code sécurisé :
+    // Sécurisation sélection musique
     let selectSong = document.getElementById('selectSong')
+
     if (selectSong) {
         selectSong.value = music2.getAttribute('src')
     }

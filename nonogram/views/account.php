@@ -57,7 +57,7 @@ if (!$currentUser) {
                             <h5 class="mb-0">Modifier mes informations</h5>
                         </div>
                         <div class="card-body p-4">
-                            <form action="/../submit_account.php" method="POST">
+                            <form action="/nonogram/submit_account.php" method="POST">
                                 <div class="mb-3">
                                     <label for="full_name" class="form-label">Nom et prénom</label>
                                     <input type="text" class="form-control" id="full_name" name="full_name" value="<?= htmlspecialchars($currentUser['username']); ?>" required>
@@ -71,7 +71,7 @@ if (!$currentUser) {
                                 <div class="mb-3">
                                     <label for="signup_password" class="form-label">Mot de passe</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="signup_password" name="password" minlength="12" required>
+                                        <input type="password" class="form-control" id="signup_password" name="password" minlength="12">
                                         <span class="input-group-text bg-white" style="cursor: pointer;">
                                             <img src="../extras/oeil_ferme_petit.png"
                                                 class="toggle-password"
@@ -85,7 +85,7 @@ if (!$currentUser) {
                                 <div class="mb-3">
                                     <label for="signup_password_conf" class="form-label">Confirmer le mot de passe</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="signup_password_conf" name="password_conf" minlength="12" required>
+                                        <input type="password" class="form-control" id="signup_password_conf" name="password_conf" minlength="12">
                                         <span class="input-group-text bg-white" style="cursor: pointer;">
                                             <img src="../extras/oeil_ferme_petit.png"
                                                 class="toggle-password"
@@ -113,7 +113,7 @@ if (!$currentUser) {
                                 Cette action est définitive et irréversible. Votre compte sera supprimé de nos serveurs.
                             </p>
 
-                            <form action="../delete_account.php" method="POST" onsubmit="return confirm('Voulez-vous vraiment supprimer votre compte ? Cette action est irréversible.');">
+                            <form action="/nonogram/delete_account.php" method="POST" onsubmit="return confirm('Voulez-vous vraiment supprimer votre compte ? Cette action est irréversible.');">
                                 <input type="hidden" name="id" value="<?php echo (int) $loggedUser['id_user']; ?>">
 
                                 <button type="submit" class="btn btn-danger w-100">

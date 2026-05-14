@@ -30,6 +30,7 @@ if (isset($_SESSION['id_user'])) {
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/picross.css">
+    
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-light">
@@ -125,6 +126,8 @@ if (isset($_SESSION['id_user'])) {
             ■
         </button>
     </div>
+    <!-- Message musique -->
+<div id="musicMessage"></div>
 
     <audio id="music2"></audio>
 </main>
